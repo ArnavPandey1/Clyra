@@ -1,43 +1,52 @@
-# Clyra Fullstack Project
+## Clyra Fullstack Project
 
 A fashion e-commerce web application allowing users to buy and rent clothes.
 
-## Project Structure
+### Project Structure
 
-- `/client`: React frontend for Clyra
-- `/server`: Node.js/Express backend API
+- `frontend/`: React SPA (customer-facing UI)
+- `backend/`: Node.js/Express REST API
 
-## Setup Instructions
+> The older `client/` and `server/` folders have been recreated as `frontend/` and `backend/`.  
+> Use the new folders for future development.
 
 ### Prerequisites
+
 - Node.js (v16+ recommended)
 - npm
 
-### Client (Frontend)
-```
-cd client
+### Frontend (`frontend/`)
+
+```bash
+cd frontend
 npm install
-npm start
+npm start         # or: npm run dev (alias)
 ```
-Runs the React SPA on [http://localhost:3000](http://localhost:3000)
 
-### Server (Backend)
-```
-cd server
+By default this runs the React app on [http://localhost:3000](http://localhost:3000).
+
+### Backend (`backend/`)
+
+```bash
+cd backend
 npm install
-npm start # (or) node index.js
+npm start         # or: npm run dev
 ```
-API will be served on [http://localhost:5000](http://localhost:5000)
 
-## Development
-- Frontend and backend run independently – connect using HTTP requests (fetch/axios to `/api/...`).
-- To begin API expansion, edit `server/index.js`.
-- To add UI pages or components, edit files inside `client/src/`.
+The API server listens on [http://localhost:5000](http://localhost:5000).
 
-## Future Ideas
-- Integrate a real database (MongoDB, PostgreSQL etc.)
-- User authentication and authorization
-- Better error handling, logging, and testing.
+### Development Notes
 
-## License
+- Frontend and backend run independently – connect via HTTP requests (e.g. `fetch`/`axios` to `/api/...` or `http://localhost:5000/...`).
+- To extend the API, edit `backend/index.js`.
+- To add or change UI, edit files inside `frontend/src/`.
+
+### Future Ideas
+
+- Integrate a real database (MongoDB, PostgreSQL, etc.).
+- Add user authentication and authorization.
+- Improve error handling, logging, and automated testing.
+
+### License
+
 MIT
